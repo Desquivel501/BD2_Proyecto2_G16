@@ -1,0 +1,26 @@
+USE BD2;
+GO
+
+ALTER DATABASE BD2
+	SET RECOVERY FULL;
+GO
+
+BACKUP DATABASE BD2
+	TO DISK = 'C:\Usac\Backup.bak'
+	WITH INIT,
+	NAME = 'BD2 - Full Database Backup';
+GO
+
+BACKUP DATABASE BD2
+	TO DISK = 'C:\Usac\Backup.bak'
+	WITH  DIFFERENTIAL,
+	NAME = 'BD2 - Differential Database Backup';
+GO
+
+BACKUP LOG BD2  
+   TO DISK = 'C:\Usac\Log.bak';  
+GO  
+
+ALTER DATABASE BD2
+	SET RECOVERY SIMPLE;
+GO

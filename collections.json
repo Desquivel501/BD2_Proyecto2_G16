@@ -1,0 +1,57 @@
+
+{
+    "games": {
+        "id": "int",
+        "name": "int",
+        "summary": "string",
+        "storyline": "string",
+        "user_rating": "float",
+        "user_rating_count": "int",
+        "critic_rating": "float",
+        "critic_rating_count": "int",
+        "parent_game": "int",
+        "release_dates": [{
+            "human": "string",
+            "region": "string",
+            "platform": "string"
+        }],
+        "genres": ["genres"],
+        "involved_companies": [{
+            "company": "string",
+            "developer": "bool",
+            "publisher": "bool",
+            "porting": "bool",
+            "supporting": "bool"
+        }],
+        "language_support": [{
+            "language": "string",
+            "language_support_type": "string"
+        }],
+        "themes": ["themes"],
+        "game_modes": ["game_modes"],
+        "player_perspectives": ["player_perspectives"],
+        "game_engines": ["game_engines"],  
+        "franchises": ["franchises"],
+        "platforms": ["platforms"]
+    },
+
+    "platforms": {
+        "id": "int",
+        "name": "string",
+        "summary": "string",
+        "alternative_name": "string",
+        "generation": "int",
+        "version_title": "string",
+        "category": "int",
+        "versions": [{
+            "name": "string",
+            "main_manufacturer": "string",
+            "platform_version_release_dates": [{
+                "human": "string",
+                "region": "string"
+            }]
+        }],
+        "games": ["games"]
+    }
+}
+

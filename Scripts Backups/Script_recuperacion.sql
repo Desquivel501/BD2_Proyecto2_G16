@@ -1,0 +1,18 @@
+USE master;
+DROP DATABASE IF EXISTS BD2
+
+RESTORE DATABASE BD2
+	FROM DISK = 'C:\Usac\Backup.bak'
+	WITH NORECOVERY;
+GO
+
+RESTORE DATABASE BD2  
+   FROM DISK = 'C:\Usac\Backup.bak'
+   WITH FILE = 2,  
+   NORECOVERY;  
+GO  
+
+RESTORE LOG BD2  
+   FROM DISK = 'C:\Usac\Log.bak';    
+   WITH NORECOVERY;  
+GO  
